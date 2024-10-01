@@ -103,9 +103,17 @@
         </div>
     </div>
     <!-- Pagination -->
-    <div class="d-flex justify-content-center mt-4">
+    {{-- <div class="d-flex justify-content-center mt-4">
         {{ $orders->links() }}
+    </div> --}}
+    <div class="d-flex justify-content-center mt-4">
+        <nav aria-label="Page navigation">
+            <ul class="pagination pagination-lg">
+                {{ $orders->onEachSide(1)->links('pagination::bootstrap-4') }}
+            </ul>
+        </nav>
     </div>
+
 </div>
 
 <script>
