@@ -293,7 +293,6 @@
                                         </div>
                                         <p class="mb-0">Most Popular Food of this Country.
                                             <span class="subcategory-btn">more food</span>
-                                            
                                         </p>
                                     </div>
                                 </div>
