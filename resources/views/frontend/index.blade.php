@@ -290,6 +290,7 @@
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
                                             <h4>{{ $category->name }}</h4>
+                                            {{-- <img src="{{ asset('frontend/img/Flag.png') }}" style="height: 20px;" alt=""> --}}
                                         </div>
                                         <p class="mb-0">Most Popular Food of this Country.
                                             <span class="subcategory-btn">more food</span>
