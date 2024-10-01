@@ -85,7 +85,6 @@ Route::controller(CheckoutController::class)->group(function(){
     Route::get('stripe', 'stripe');
     Route::post('stripe', 'stripePost')->name('stripe.post');
 });
-Route::post('/checkout/stripe/process', [CheckoutController::class, 'stripePost'])->name('checkout.stripePost');
 
 
 

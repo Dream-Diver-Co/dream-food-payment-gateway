@@ -88,7 +88,7 @@
                     <div class="card-body">
                         <h4 class="text-right font-weight-bold">Total Items: <span id="overall-quantity">{{ $cartItems->sum('quantity') }}</span></h4>
                         <h3 class="text-right font-weight-bold">Total: <span id="overall-total">${{ number_format($cartItems->sum(fn($item) => $item->product ? $item->product->price * $item->quantity : 0), 2) }}</span></h3>
-                        <a href="{{ route('checkout.index') }}" class="btn btn-primary btn-block mt-3">Proceed to Checkout</a>
+                        <a href="{{url('stripe')}}" class="btn btn-primary btn-block mt-3">Proceed to Checkout</a>
                         <a href="{{ route('shop')}}" class="btn btn-outline-primary btn-block mt-2">
                             <i class="fas fa-shopping-cart"></i> Continue Shopping
                         </a>
