@@ -68,7 +68,7 @@
                             <div class="service-content-icon text-center">
                                 <img src="{{ asset('frontend/img/menu2-2.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                                 <h4 class="mb-3">07 Order Gift</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                                <p class="mb-4">Order Gift: Surprise loved ones with thoughtful gifts delivered right to their doorstep today!</p>
                                 <a href="order-gift.html" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                             </div>
                         </div>
