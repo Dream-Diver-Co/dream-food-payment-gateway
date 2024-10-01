@@ -40,7 +40,7 @@
                         <div class="service-content-icon text-center">
                             <img src="{{ asset('frontend/img/Shef1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Nehal Chef</h4>
-                            <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                            <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
                             <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                         <div class="service-content-icon text-center">
                             <img src="{{ asset('frontend/img/Shef2.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Zozo Chef</h4>
-                            <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                            <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
                             <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="service-content-icon text-center">
                             <img src="{{ asset('frontend/img/Shef3.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Jhon Chef</h4>
-                            <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                            <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
                             <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                         <div class="service-content-icon text-center">
                             <img src="{{ asset('frontend/img/Shef1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Leo Chef</h4>
-                            <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                            <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
                             <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                         </div>
                     </div>
