@@ -93,7 +93,7 @@
                             <div class="service-content-icon text-center">
                                 <img src="{{ asset('frontend/img/menu1-1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                                 <h4 class="mb-3">Deal Of The Day</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                                <p class="mb-4">iscover incredible savings with our Deal of the Day—exclusive offers that won't last long!</p>
                                 <a href="deal-of-the.html" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                             </div>
                         </div>
