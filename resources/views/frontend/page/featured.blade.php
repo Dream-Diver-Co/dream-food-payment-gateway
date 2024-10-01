@@ -80,7 +80,8 @@
                             <div class="service-content-icon text-center">
                                 <img src="{{ asset('frontend/img/menu2-3.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                                 <h4 class="mb-3">Special Day Gift</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                                <p class="mb-4">
+                                    A Special Day Gift expresses love and appreciation, creating cherished memories and celebrating unique moments.</p>
                                 <a href="special-gift.html" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                             </div>
                         </div>
