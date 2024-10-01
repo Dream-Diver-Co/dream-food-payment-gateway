@@ -250,7 +250,8 @@
                         @foreach($categories as $category)
                             @if($loop->index % 2 == 0)  <!-- Display odd indexed data (since index starts at 0) -->
                             <div class="col-lg-12 wow bounceInUp" data-wow-delay="0.1s">
-                                <a href="{{ route('categories.subcategories', $category->id) }}">
+                                <a href="{{ route('categories.products', $category->id) }}">
+                                    {{-- <a href="{{ route('categories.subcategories', $category->id) }}"> --}}
                                     <div class="menu-item d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid rounded-circle" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" style="object-fit: cover;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
@@ -283,7 +284,7 @@
                     @foreach($categories as $category)
                         @if($loop->index % 2 != 0) <!-- Display even indexed data -->
                         <div class="col-lg-12 wow bounceInUp" data-wow-delay="0.1s">
-                            <a href="{{ route('categories.subcategories', $category->id) }}">
+                            <a href="{{ route('categories.products', $category->id) }}">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" style="object-fit: cover;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -292,6 +293,7 @@
                                         </div>
                                         <p class="mb-0">Most Popular Food of this Country.
                                             <span class="subcategory-btn">more food</span>
+                                            
                                         </p>
                                     </div>
                                 </div>
