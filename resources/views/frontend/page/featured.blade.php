@@ -56,7 +56,7 @@
                             <div class="service-content-icon text-center">
                                 <img src="{{ asset('frontend/img/menu2-1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                                 <h4 class="mb-3">200% Cashback</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
+                                <p class="mb-4">Get 200% cashback on your purchases! Double your savings and enjoy exclusive rewards today!</p>
                                 <a href="cashback.html" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
                             </div>
                         </div>
