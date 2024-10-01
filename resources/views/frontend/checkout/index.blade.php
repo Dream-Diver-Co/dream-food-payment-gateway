@@ -12,19 +12,19 @@
             </div>
         </div>
         <!-- Hero End -->
-    {{-- <!-- Breadcrumb Start -->
-    <div class="container-fluid">
-        <div class="row px-xl-5">
-            <div class="col-12">
-                <nav class="breadcrumb bg-light mb-30">
-                    <a class="breadcrumb-item text-dark" href="">Home</a>
-                    <a class="breadcrumb-item text-dark" href="">Shop</a>
-                    <span class="breadcrumb-item active">Checkout</span>
-                </nav>
+        {{-- <!-- Breadcrumb Start -->
+        <div class="container-fluid">
+            <div class="row px-xl-5">
+                <div class="col-12">
+                    <nav class="breadcrumb bg-light mb-30">
+                        <a class="breadcrumb-item text-dark" href="">Home</a>
+                        <a class="breadcrumb-item text-dark" href="">Shop</a>
+                        <span class="breadcrumb-item active">Checkout</span>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Breadcrumb End --> --}}
+        <!-- Breadcrumb End --> --}}
 
     <div class="container-fluid">
         <form action="{{ route('checkout.process') }}" method="POST">
