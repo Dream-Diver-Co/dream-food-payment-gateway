@@ -21,6 +21,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ChefContactController;
+use App\Http\Controllers\MyChefController;
 
 /*
 |--------------------------------------------------------------------------
@@ -146,6 +147,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/products/{product}/status_1', [ProductController::class, 'updateStatus_1'])->name('products.updateStatus_1');
 
         Route::resource('chefcontact', ChefContactController::class);
+        Route::resource('mychef', MyChefController::class);
+
 
 
 

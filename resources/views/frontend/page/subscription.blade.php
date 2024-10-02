@@ -19,10 +19,10 @@
 <div class="container-fluid service">
     <div class="container">
         <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-            <h1 class="display-5 mb-5">We Have 04 Subscription systems</h1>
+            <h1 class="display-5 mb-5">We Have 03 Subscription systems</h1>
         </div>
         <div class="row g-4 display-block">
-            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInRight" data-wow-delay="0.1s">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInRight" data-wow-delay="0.1s">
                 <div class="bg-wheat rounded service-item subscription">
                     <div class="service-content d-flex align-items-center justify-content-center p-4">
                         <div class="service-content-icon text-center">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInDown" data-wow-delay="0.3s">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInDown" data-wow-delay="0.3s">
                 <div class="bg-wheat rounded service-item subscription">
                     <div class="service-content d-flex align-items-center justify-content-center p-4">
                         <div class="service-content-icon text-center">
@@ -70,7 +70,7 @@
    </div>                 </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
                 <div class="bg-wheat rounded service-item subscription">
                     <div class="service-content d-flex align-items-center justify-content-center p-4">
                         <div class="service-content-icon text-center">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInLeft" data-wow-delay="0.7s">
+            {{-- <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInLeft" data-wow-delay="0.7s">
                 <div class="bg-wheat rounded service-item subscription">
                     <div class="service-content d-flex align-items-center justify-content-center p-4">
                         <div class="service-content-icon text-center">
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

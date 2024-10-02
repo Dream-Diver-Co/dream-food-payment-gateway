@@ -24,11 +24,11 @@
 <div class="card">
   <div class="card-header">Admincontact Details</div>
   <div class="card-body">
-    <p>Map Location: {{ $admincontact->map }}</p>
-    <p>Address: {{ $admincontact->address }}</p>
-    <p>Email: {{ $admincontact->email }}</p>
-    <p>Phone: {{ $admincontact->phone }}</p>
+    <h1>{{ $mychef->name }}</h1>
+    <p><img src="{{ asset('storage/'.$mychef->image) }}" alt="{{ $mychef->name }}" width="200"></p>
+    <p>{{ $mychef->description }}</p>
   </div>
+  <a href="{{ route('mychef.index') }}">Back to list</a>
 </div>
 @endsection
 
