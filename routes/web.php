@@ -20,7 +20,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\PaymentController;
-
+use App\Http\Controllers\ChefContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +44,7 @@ Route::get('/subscription', [FrontendController::class, 'subscription'])->name('
 Route::get('/booking', [FrontendController::class, 'booking'])->name('booking');
 // Route::resource('usercontact', UserContactController::class);
 Route::post('usercontact', [UserContactController::class, 'store']);
+
 
 
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
@@ -142,6 +143,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('products', ProductController::class);
         Route::post('/products/{product}/status', [ProductController::class, 'updateStatus'])->name('products.updateStatus');
         Route::post('/products/{product}/status_1', [ProductController::class, 'updateStatus_1'])->name('products.updateStatus_1');
+
+        Route::resource('chefcontact', ChefContactController::class);
 
 
 

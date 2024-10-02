@@ -160,10 +160,32 @@
                             </ul>
                         </li>
 
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="fa-solid fa-address-card"></i>
+                                <span>Chef</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);" class="has-arrow">Chef Contact</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="{{ route('chefcontact.create')}}">create</a></li>
+                                        <li><a href="{{ route('chefcontact.index')}}">Chef Contact List</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
+                                    {{-- <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="{{ route('admincontact.create')}}">Admin Contact Add</a></li>
+                                        <li><a href="{{ route('admincontact.index')}}">Admin Contact List</a></li>
+                                    </ul> --}}
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
 
-                
+
                 {{-- <li>
                     <a href="#" class=" waves-effect">
                         <i class="ri-price-tag-3-line"></i>
