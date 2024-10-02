@@ -175,8 +175,8 @@
 
                                 <li><a href="javascript: void(0);" class="has-arrow">My Chef</a>
                                     <ul class="sub-menu" aria-expanded="true">
-                                        <li><a href="{{ route('mychef.create')}}">My Chef Add</a></li>
-                                        <li><a href="{{ route('mychef.index')}}">My Chef List</a></li>
+                                        <li><a href="{{ route('mychef.create')}}">Chef Add</a></li>
+                                        <li><a href="{{ route('mychef.index')}}">Chef List</a></li>
                                     </ul>
                                 </li>
                             </ul>
