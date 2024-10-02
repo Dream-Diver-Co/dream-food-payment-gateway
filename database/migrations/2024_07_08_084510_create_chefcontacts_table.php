@@ -15,6 +15,12 @@ return new class extends Migration
             $table->string("phone")->nullable();
             $table->text("subject")->nullable();
             $table->text("note")->nullable();
+            $table->string('image')->nullable();
+            $table->string("address")->nullable();
+            $table->date("date")->nullable();
+            $table->time("time")->nullable();
+            $table->string("event_name")->nullable();
+            $table->string("chef_name")->nullable();
             $table->timestamps();
         });
     }

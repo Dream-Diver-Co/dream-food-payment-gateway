@@ -44,6 +44,7 @@ Route::get('/subscription', [FrontendController::class, 'subscription'])->name('
 Route::get('/booking', [FrontendController::class, 'booking'])->name('booking');
 // Route::resource('usercontact', UserContactController::class);
 Route::post('usercontact', [UserContactController::class, 'store']);
+Route::post('chefcontact', [ChefContactController::class, 'store']);
 
 
 

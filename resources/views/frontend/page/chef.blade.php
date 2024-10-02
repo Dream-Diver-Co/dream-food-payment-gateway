@@ -1,7 +1,20 @@
 @extends("frontend.layouts.master")
 
 @section("content")
-
+<!-- success message -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- Check for success message -->
+            @if(session('success'))
+                <div id="success-message" class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+    </div>
+</div>
+<!-- success message -->
 <!-- Hero End -->
 <div class="container-fluid bg-light mt-0">
     <div class="container">
@@ -101,7 +114,7 @@
                         <h1 class="display-5 mb-5">Where you want Our Chef Services</h1>
                     </div>
                     <div class="row g-4 form">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        {{-- <div class="col-lg-6 col-md-6 col-sm-12">
                             <input type="name" class="form-control border-primary p-2" placeholder="Your Name">
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -121,7 +134,55 @@
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
-                        </div>
+                        </div> --}}
+                        <form action="{{ url('chefcontact') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                                <label for="name">Name</label><br>
+                                <input type="text" name="name" class="form-control" required><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label><br>
+                                <input type="email" name="email" class="form-control" required><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label><br>
+                                <input type="text" name="phone" class="form-control" required><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label><br>
+                                <input type="text" name="subject" class="form-control" required><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="note">Note</label><br>
+                                <textarea name="note" class="form-control" required></textarea><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label><br>
+                                <input type="text" name="address" class="form-control"><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date</label><br>
+                                <input type="date" name="date" class="form-control"><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label><br>
+                                <input type="time" name="time" class="form-control"><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="event_name">Event Name</label><br>
+                                <input type="text" name="event_name" class="form-control"><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="chef_name">Chef Name</label><br>
+                                <input type="text" name="chef_name" class="form-control"><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Image</label><br>
+                                <input type="file" name="image" class="form-control"><br>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -132,6 +193,18 @@
     </div>
 </div>
 <!-- Book Us End -->
+
+<script>
+    // Auto-hide the success message after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+    });
+</script>
 
 @endsection
 

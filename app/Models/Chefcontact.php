@@ -8,7 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class ChefContact extends Model
 {
     use HasFactory;
+
+    // Specify the table name
     protected $table = 'chefcontacts';
+
+    // Set the primary key
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'email', 'phone', 'subject', 'note', 'image'];
+
+    // Fields that are mass assignable
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'subject',
+        'note',
+        'image',
+        'address',  
+        'date',
+        'time',
+        'event_name',
+        'chef_name',
+    ];
 }

@@ -7,12 +7,12 @@
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+        <div class="page-title-box d-sm-flex align-chefcontacts-center justify-content-between">
             <h4 class="mb-sm-0">Profile</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-chefcontact"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
+                    <li class="breadcrumb-chefcontact active">Profile</li>
                 </ol>
             </div>
 
@@ -40,25 +40,35 @@
                                     <th>Phone</th>
                                     <th>Subject</th>
                                     <th>Note</th>
+                                    <th>Address</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Event Name</th>
+                                    <th>Chef Name</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($chefcontacts as $item)
+                            @foreach($chefcontacts as $chefcontact)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
-                                        <a href="{{ url('admin/chefcontact/' . $item->id) }}" title="View ChefContact"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                        <form method="POST" action="{{ url('admin/chefcontact' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                        <a href="{{ url('admin/chefcontact/' . $chefcontact->id) }}" title="View ChefContact"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                        <form method="POST" action="{{ url('admin/chefcontact' . '/' . $chefcontact->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-danger btn-sm" title="Delete ChefContact" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                         </form>
                                     </td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->email }}</td>
-                                    <td>{{ $item->phone }}</td>
-                                    <td>{{ $item->subject }}</td>
-                                    <td>{{ $item->note }}</td>
+                                    <td>{{ $chefcontact->name }}</td>
+                                    <td>{{ $chefcontact->email }}</td>
+                                    <td>{{ $chefcontact->phone }}</td>
+                                    <td>{{ $chefcontact->subject }}</td>
+                                    <td>{{ $chefcontact->note }}</td>
+                                    <td>{{ $chefcontact->address }}</td>
+                                    <td>{{ $chefcontact->date }}</td>
+                                    <td>{{ $chefcontact->time }}</td>
+                                    <td>{{ $chefcontact->event_name }}</td>
+                                    <td>{{ $chefcontact->chef_name }}</td>
 
                                 </tr>
                             @endforeach

@@ -38,19 +38,53 @@
   <div class="card-header">Create New ChefContact</div>
   <div class="card-body">
 
-    <form action="{{ url('admin/chefcontact') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('chefcontact.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label>Name</label></br>
-        <input type="text" name="name" id="name" class="form-control"></br>
-        <label>Email</label></br>
-        <input type="email" name="email" id="email" class="form-control"></br>
-        <label>Phone</label></br>
-        <input type="text" name="phone" id="phone" class="form-control"></br>
-        <label>Subject</label></br>
-        <input type="subject" name="subject" id="subject" class="form-control"></br>
-        <label>Note</label></br>
-        <input type="text" name="note" id="note" class="form-control"></br>
-        <input type="submit" value="Save" class="btn btn-success"></br>
+        <div class="form-group">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" class="form-control" required><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" class="form-control" required><br>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label><br>
+            <input type="text" name="phone" class="form-control" required><br>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label><br>
+            <input type="text" name="subject" class="form-control" required><br>
+        </div>
+        <div class="form-group">
+            <label for="note">Note</label><br>
+            <textarea name="note" class="form-control" required></textarea><br>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label><br>
+            <input type="text" name="address" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label><br>
+            <input type="date" name="date" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label><br>
+            <input type="time" name="time" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="event_name">Event Name</label><br>
+            <input type="text" name="event_name" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="chef_name">Chef Name</label><br>
+            <input type="text" name="chef_name" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label><br>
+            <input type="file" name="image" class="form-control"><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
   </div>
