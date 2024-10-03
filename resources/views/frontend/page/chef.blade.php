@@ -113,77 +113,51 @@
                         <small class="d-inline-block fw-bold text-dark text-uppercase bg-white border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
                         <h1 class="display-5 mb-5">Where you want Our Chef Services</h1>
                     </div>
-                    <div class="row g-4 form">
-                        {{-- <div class="col-lg-6 col-md-6 col-sm-12">
-                            <input type="name" class="form-control border-primary p-2" placeholder="Your Name">
+                    <form action="{{ url('chefcontact') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row g-4 form">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <input type="text" name="name" class="form-control border-primary p-2" placeholder="Your Name">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="email" name="email" class="form-control border-primary p-2" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" name="phone" class="form-control border-primary p-2" placeholder="Your Phone" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" name="address" class="form-control border-primary p-2" placeholder="Your Address">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="date" name="date" class="form-control border-primary p-2" placeholder="Date">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="time" name="time" class="form-control border-primary p-2" placeholder="Time">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <input type="text" name="event_name" class="form-control border-primary p-2" placeholder="Event Name">
+                            </div>
+                            {{-- <div class="col-lg-6 col-md-6">
+                                <input type="text" name="chef_name" class="form-control border-primary p-2" placeholder="Chef Name">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <input type="text" name="subject" class="form-control border-primary p-2" placeholder="Subject" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <textarea name="note" class="form-control border-primary p-2" placeholder="NOTE" required></textarea>
+                            </div> --}}
+                            <div class="col-lg-6 col-md-6">
+                                <input type="file" name="image" class="form-control border-primary p-2" placeholder="Image">
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <textarea name="note" class="form-control border-primary p-2" placeholder="Your Note" required></textarea>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No">
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <input type="file" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <input type="note" class="form-control border-primary p-2" placeholder="note">
-                        </div>
-                        <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
-                        </div> --}}
-                        <form action="{{ url('chefcontact') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group">
-                                <label for="name">Name</label><br>
-                                <input type="text" name="name" class="form-control" required><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label><br>
-                                <input type="email" name="email" class="form-control" required><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label><br>
-                                <input type="text" name="phone" class="form-control" required><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label><br>
-                                <input type="text" name="subject" class="form-control" required><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="note">Note</label><br>
-                                <textarea name="note" class="form-control" required></textarea><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Address</label><br>
-                                <input type="text" name="address" class="form-control"><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Date</label><br>
-                                <input type="date" name="date" class="form-control"><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="time">Time</label><br>
-                                <input type="time" name="time" class="form-control"><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="event_name">Event Name</label><br>
-                                <input type="text" name="event_name" class="form-control"><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="chef_name">Chef Name</label><br>
-                                <input type="text" name="chef_name" class="form-control"><br>
-                            </div>
-                            <div class="form-group">
-                                <label for="image">Image</label><br>
-                                <input type="file" name="image" class="form-control"><br>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="col-1">
@@ -207,4 +181,5 @@
 </script>
 
 @endsection
+
 
