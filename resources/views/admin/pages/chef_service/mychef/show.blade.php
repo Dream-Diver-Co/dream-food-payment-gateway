@@ -23,12 +23,23 @@
 
 <div class="card">
   <div class="card-header">Admincontact Details</div>
-  <div class="card-body">
-    <h1>{{ $mychef->name }}</h1>
-    <p><img src="{{ asset('storage/'.$mychef->image) }}" alt="{{ $mychef->name }}" width="200"></p>
-    <p>{{ $mychef->description }}</p>
-  </div>
-  <a href="{{ route('mychef.index') }}">Back to list</a>
+    <div class="card-body">
+        <h1>{{ $mychef->name }}</h1>
+        <p><strong>Description:</strong> {{ $mychef->description }}</p>
+        <p><strong>Image:</strong>
+            @if($mychef->image)
+            <img src="{{ asset('storage/' . $mychef->image) }}" alt="mychef Image" width="300">
+            @endif
+        </p>
+
+        <a href="{{ route('mychef.edit', $mychef) }}" class="btn btn-warning btn-sm action-btn">Edit</a>
+        <form action="{{ route('mychef.destroy', $mychef) }}" method="POST" style="display:inline">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-danger btn-sm action-btn" title="Delete mychef" onclick="return confirm('Confirm delete?')">Delete</button>
+        </form>
+        <a href="{{ route('mychef.index') }}" class="btn btn-secondary btn-sm action-btn" style="width: 114px">Back to Chef List</a>
+    </div>
 </div>
 @endsection
 
