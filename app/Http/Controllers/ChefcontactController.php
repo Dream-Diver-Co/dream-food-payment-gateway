@@ -25,8 +25,8 @@ class ChefContactController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:15',
-            'subject' => 'required|string|max:255',
-            'note' => 'required|string|max:500',
+            'subject' => 'nullable|string|max:255',
+            'note' => 'nullable|string|max:500',
             'address' => 'nullable|string|max:255',
             'date' => 'nullable|date',
             'time' => 'nullable|date_format:H:i', // Updated validation rule for time
