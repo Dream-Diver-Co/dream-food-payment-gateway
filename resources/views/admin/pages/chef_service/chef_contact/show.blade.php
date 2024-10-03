@@ -28,7 +28,15 @@
     <h5 class="card-title">Name: {{ $chefcontacts->name }}</h5>
     <p class="card-text">Email: {{ $chefcontacts->email }}</p>
     <p class="card-text">Mobile: {{ $chefcontacts->phone }}</p>
-    <p class="card-text">Subject: {{ $chefcontacts->subject }}</p>
+    <p class="card-text">Address: {{ $chefcontacts->address }}</p>
+    <p class="card-text">Date: {{ $chefcontacts->date }}</p>
+    <p class="card-text">Time: {{ $chefcontacts->time }}</p>
+    <p class="card-text">Event Name: {{ $chefcontacts->event_name }}</p>
+    <p><strong>Image:</strong>
+        @if($chefcontacts->image)
+        <img src="{{ asset('storage/' . $chefcontacts->image) }}" alt="chefcontacts Image" width="300">
+        @endif
+    </p>
     <p class="card-text">Note: {{ $chefcontacts->note }}</p>
   </div>
 </div>

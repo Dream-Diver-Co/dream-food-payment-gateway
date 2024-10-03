@@ -38,13 +38,14 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Subject</th>
-                                    <th>Note</th>
                                     <th>Address</th>
                                     <th>Date</th>
                                     <th>Time</th>
-                                    <th>Event Name</th>
-                                    <th>Chef Name</th>
+                                    <th>Event</th>
+                                    <th>image</th>
+                                    {{-- <th>Chef Name</th>
+                                    <th>Subject</th> --}}
+                                    <th>Note</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,14 +63,14 @@
                                     <td>{{ $chefcontact->name }}</td>
                                     <td>{{ $chefcontact->email }}</td>
                                     <td>{{ $chefcontact->phone }}</td>
-                                    <td>{{ $chefcontact->subject }}</td>
-                                    <td>{{ $chefcontact->note }}</td>
                                     <td>{{ $chefcontact->address }}</td>
                                     <td>{{ $chefcontact->date }}</td>
                                     <td>{{ $chefcontact->time }}</td>
                                     <td>{{ $chefcontact->event_name }}</td>
-                                    <td>{{ $chefcontact->chef_name }}</td>
-
+                                    <td><img src="{{ asset('storage/'. $chefcontact->image) }}" alt="Image" style="width: 100px; height: 100px;"></td>
+                                    {{-- <td>{{ $chefcontact->chef_name }}</td>
+                                    <td>{{ $chefcontact->subject }}</td> --}}
+                                    <td>{{ $chefcontact->note }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
