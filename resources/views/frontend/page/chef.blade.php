@@ -14,16 +14,6 @@
         </div>
     </div>
 </div>
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <!-- success message -->
 <!-- Hero End -->
 <div class="container-fluid bg-light mt-0">
@@ -50,6 +40,8 @@
     </div>
  </div>
 
+
+
 <!-- Service Start -->
 <div class="container-fluid service py-6">
     <div class="container">
@@ -64,7 +56,7 @@
                             <img src="{{ asset('frontend/img/Shef1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Nehal Chef</h4>
                             <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                            {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a> --}}
                         </div>
                     </div>
                 </div>
@@ -76,7 +68,7 @@
                             <img src="{{ asset('frontend/img/Shef2.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Zozo Chef</h4>
                             <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                            {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a> --}}
                         </div>
                     </div>
                 </div>
@@ -88,7 +80,7 @@
                             <img src="{{ asset('frontend/img/Shef3.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Jhon Chef</h4>
                             <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                            {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a> --}}
                         </div>
                     </div>
                 </div>
@@ -100,7 +92,7 @@
                             <img src="{{ asset('frontend/img/Shef1.png') }}" class="img-fluid rounded animated zoomIn" alt="">
                             <h4 class="mb-3">Mr.Leo Chef</h4>
                             <p class="mb-4">A chef is a skilled culinary professional who prepares, creates, and presents delicious, artful meals.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                            {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a> --}}
                         </div>
                     </div>
                 </div>
