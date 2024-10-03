@@ -182,6 +182,34 @@
                             </ul>
                         </li>
 
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="fa-solid fa-address-card"></i>
+                                <span>subscription</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        {{-- <li><a href="{{ route('usercontact.create')}}">create</a></li> --}}
+                                        <li><a href="{{ route('usercontact.index')}}">User Contact List</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="javascript: void(0);" class="has-arrow">Subscribes Contact</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="{{ route('subscribe.create')}}">Subscribes Contact Add</a></li>
+                                        <li><a href="{{ route('subscribe.index')}}">Subscribes Contact List</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+
+
+
                     </ul>
                 </li>
 

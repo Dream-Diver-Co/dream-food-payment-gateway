@@ -39,7 +39,7 @@
                                     <li class="pricing-feature">1GB of storage space</li>
                                     <li class="pricing-feature">Unlimited calls</li>
                                   </ul>
-                                  <button onclick="showBasicModal()" id="id01" class="pricing-action">Subscribe</button>
+                                  <button onclick="showBasicModal()" class="pricing-action">Subscribe</button>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                   <li class="pricing-feature">1GB of storage space</li>
                                   <li class="pricing-feature">Unlimited calls</li>
                                 </ul>
-                                <button onclick="showStandardModal()" class="pricing-action">Subscribe</button>
+                                <button onclick="showBasicModal()" class="pricing-action">Subscribe</button>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@
                                     <li class="pricing-feature">Analytics integration</li>
                                     <li class="pricing-feature">Unlimited storage space</li>
                                 </ul>
-                                <button onclick="showPremiumModal()" class="pricing-action">Subscribe</button>
+                                <button onclick="showBasicModal()" class="pricing-action">Subscribe</button>
                             </div>
                             </div>
                         </div>
@@ -131,8 +131,8 @@
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <!-- <img src="img/foody.png" alt="logo" class="avatar"> -->
             <h1 class="display-5">Subscription Form</h1>
-            <h3 class="text-head">Selected Plan: Basic</h3>
-            <h3 class="pricing-title-modal">Plan Price: $90.9</h3>
+            {{-- <h3 class="text-head">Selected Plan: Basic</h3>
+            <h3 class="pricing-title-modal">Plan Price: $90.9</h3> --}}
         </div>
 
         <div class="container">
@@ -162,7 +162,7 @@
         </div>
     </form>
 </div>
-<div id="id02" class="modal">
+{{-- <div id="id02" class="modal">
     <form class="modal-content animate" action="" method="post">
 
         <div class="imgcontainer">
@@ -275,7 +275,53 @@
             </div>
         </div>
     </form>
-</div>
+</div> --}}
 
+<script>
+    $(document).ready(function () {
+        console.log('Document ready function fired');
+
+        var basicModal = document.getElementById('id01');
+        // var standardModal = document.getElementById('id02');
+        // var premiumModal = document.getElementById('id03');
+        // var proModal = document.getElementById('id04');
+
+        $(window).click(function (event) {
+            if (event.target == basicModal) {
+                basicModal.style.display = "none";
+            }
+            // if (event.target == standardModal) {
+            //     standardModal.style.display = "none";
+            // }
+            // if (event.target == premiumModal) {
+            //     premiumModal.style.display = "none";
+            // }
+            // if (event.target == proModal) {
+            //     proModal.style.display = "none";
+            // }
+        });
+    });
+
+    // Define functions to show different subscription modals
+    function showBasicModal() {
+        var basicModal = document.getElementById('id01');
+        basicModal.style.display = "block";
+    }
+
+    // function showStandardModal() {
+    //     var standardModal = document.getElementById('id02');
+    //     standardModal.style.display = "block";
+    // }
+
+    // function showPremiumModal() {
+    //     var premiumModal = document.getElementById('id03');
+    //     premiumModal.style.display = "block";
+    // }
+
+    // function showProModal() {
+    //     var proModal = document.getElementById('id04');
+    //     proModal.style.display = "block";
+    // }
+</script>
 @endsection
 

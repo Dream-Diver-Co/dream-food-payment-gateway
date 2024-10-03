@@ -60,7 +60,7 @@
     background-color:  white;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
   }
@@ -72,8 +72,8 @@
   /* The Close Button (x) */
   .close {
     position: absolute;
-    right: 25px;
-    top: 0;
+    right: 20px;
+    top: -25px;
     color: #000;
     font-size: 35px;
     font-weight: bold;
