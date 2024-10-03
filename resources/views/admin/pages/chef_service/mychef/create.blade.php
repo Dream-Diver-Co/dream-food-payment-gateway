@@ -43,10 +43,10 @@
             @csrf
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name" class="form-control" required><br>
-            <label for="image">Image</label><br>
-            <input type="file" name="image" id="image" class="form-control" required><br>
             <label for="description">Description</label><br>
             <textarea name="description" id="description" class="form-control"></textarea><br>
+            <label for="image">Image</label><br>
+            <input type="file" name="image" id="image" class="form-control" required><br>
             <button type="submit" class="btn btn-success">Save</button><br>
         </form>
     </div>
