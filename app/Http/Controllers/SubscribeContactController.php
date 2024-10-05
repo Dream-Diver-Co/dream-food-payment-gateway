@@ -43,7 +43,7 @@ class SubscribeContactController extends Controller
     public function show($id)
     {
         $subscribecontact = SubscribeContact::find($id);
-        return view('admin.pages.contact.subscribe.show')->with('subscribecontacts', $subscribecontact);
+        return view('admin.pages.subscription.subscribe.show')->with('subscribecontact', $subscribecontact);
     }
 
     public function edit($id)

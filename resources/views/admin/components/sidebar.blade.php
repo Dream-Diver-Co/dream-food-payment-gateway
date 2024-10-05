@@ -197,8 +197,8 @@
 
                                 <li><a href="javascript: void(0);" class="has-arrow">Subscribes Contact</a>
                                     <ul class="sub-menu" aria-expanded="true">
-                                        <li><a href="{{ route('subscribecontact.create')}}">Subscribes Contact Add</a></li>
-                                        <li><a href="{{ route('subscribecontact.index')}}">Subscribes Contact List</a></li>
+                                        {{-- <li><a href="{{ route('subscribecontact.create')}}">Subscribes Contact Add</a></li> --}}
+                                        <li><a href="{{ route('subscribecontact.index')}}">Contact List</a></li>
                                     </ul>
                                 </li>
                             </ul>
