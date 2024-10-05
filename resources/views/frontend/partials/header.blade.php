@@ -31,7 +31,7 @@
                         <div class="dropdown-menu m-0">
                             <a href="{{ route('about') }}" class="dropdown-item {{ Route::is('about') ? 'active' : '' }}">About</a>
                             <a href="{{ route('cart.show') }}" class="dropdown-item {{ Route::is('cart.show') ? 'active' : '' }}">Cart</a>
-                            <a href="{{ route('checkout.index') }}" class="dropdown-item {{ Route::is('checkout.index') ? 'active' : '' }}">Checkout</a>
+                            <a href="{{url('stripe')}}" class="dropdown-item {{ Route::is('checkout.index') ? 'active' : '' }}">Checkout</a>
                             <a href="{{ route('booking') }}" class="dropdown-item {{ Route::is('booking') ? 'active' : '' }}">Booking</a>
                         </div>
                     </div>
