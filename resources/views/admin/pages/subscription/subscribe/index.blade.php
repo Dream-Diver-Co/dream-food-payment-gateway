@@ -1,18 +1,18 @@
 @extends('admin.layouts.master')
 
-@section('title', 'subscribe')
+@section('title', 'subscribecontact')
 @section('content')
 
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">subscribe</h4>
+            <h4 class="mb-sm-0">subscribecontact</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active">subscribe</li>
+                    <li class="breadcrumb-item active">subscribecontact</li>
                 </ol>
             </div>
 
@@ -41,11 +41,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>subscribe List</h2>
+                    <h2>subscribecontact List</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('subscribe.create') }}" class="btn btn-success btn-sm" title="Add New Hero">
-                        Create subscribe
+                    <a href="{{ route('subscribecontact.create') }}" class="btn btn-success btn-sm" title="Add New Hero">
+                        Create subscribecontact
                     </a>
                     <br/><br/>
                     <div class="table-responsive">
@@ -61,17 +61,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($subscribes as $subscribe)
+                                @foreach($subscribecontacts as $subscribecontact)
                                 <tr>
-                                    <td>{{ $subscribe->name }}</td>
-                                    <td>{{ $subscribe->email }}</td>
-                                    <td>{{ $subscribe->phone }}</td>
-                                    <td>{{ $subscribe->subject }}</td>
-                                    <td>{{ $subscribe->note }}</td>
+                                    <td>{{ $subscribecontact->name }}</td>
+                                    <td>{{ $subscribecontact->email }}</td>
+                                    <td>{{ $subscribecontact->phone }}</td>
+                                    <td>{{ $subscribecontact->subject }}</td>
+                                    <td>{{ $subscribecontact->note }}</td>
                                     <td>
-                                        <a href="{{ route('subscribe.show', $subscribe->id) }}">View</a>
-                                        <a href="{{ route('subscribe.edit', $subscribe->id) }}">Edit</a>
-                                        <form action="{{ route('subscribe.destroy', $subscribe->id) }}" method="POST">
+                                        <a href="{{ route('subscribecontact.show', $subscribecontact->id) }}">View</a>
+                                        <a href="{{ route('subscribecontact.edit', $subscribecontact->id) }}">Edit</a>
+                                        <form action="{{ route('subscribecontact.destroy', $subscribecontact->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit">Delete</button>

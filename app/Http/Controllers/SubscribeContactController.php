@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Subscribe;
+use App\Models\SubscribeContact;
 
-class SubscribeController extends Controller
+class SubscribeContactController extends Controller
 {
     public function index()
     {
-        $subscribes = Subscribe::all();
-        return view('admin.pages.subscription.subscribe.index')->with('subscribes', $subscribes);
+        $subscribecontacts = SubscribeContact::all();
+        return view('admin.pages.subscription.subscribe.index')->with('subscribecontacts', $subscribecontacts);
     }
 
     public function create()
@@ -30,49 +30,44 @@ class SubscribeController extends Controller
         ]);
 
         $input = $request->all();
-
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $path = $file->store('images', 'public');
             $input['image'] = $path;
         }
 
-        Subscribe::create($input);
-
-        return redirect()->back()->with('flash_message', 'Your subscription has been added!');
+        SubscribeContact::create($input);
+        return redirect()->back()->with('success', 'Your message has been sent!');
     }
 
     public function show($id)
     {
-        $subscribe = Subscribe::find($id);
-        return view('admin.pages.subscription.subscribe.show')->with('subscribes', $subscribe);
+        $subscribecontact = SubscribeContact::find($id);
+        return view('admin.pages.contact.subscribe.show')->with('subscribecontacts', $subscribecontact);
     }
 
     public function edit($id)
     {
-        $subscribe = Subscribe::find($id);
-        return view('admin.pages.subscription.subscribe.edit')->with('subscribes', $subscribe);
+        $subscribecontact = SubscribeContact::find($id);
+        return view('admin.pages.subscription.subscribe.edit')->with('subscribecontacts', $subscribecontact);
     }
 
     public function update(Request $request, $id)
     {
-        $subscribe = Subscribe::find($id);
+        $subscribecontact = SubscribeContact::find($id);
         $input = $request->all();
-
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $path = $file->store('images', 'public');
             $input['image'] = $path;
         }
-
-        $subscribe->update($input);
-
-        return redirect('admin/subscribe')->with('flash_message', 'Subscription Updated!');
+        $subscribecontact->update($input);
+        return redirect('admin/subscribecontact')->with('flash_message', 'SubscribeContact Updated!');
     }
 
     public function destroy($id)
     {
-        Subscribe::destroy($id);
-        return redirect('admin/subscribe')->with('flash_message', 'Subscription Deleted!');
+        SubscribeContact::destroy($id);
+        return redirect('admin/subscribecontact')->with('flash_message', 'SubscribeContact Deleted!');
     }
 }

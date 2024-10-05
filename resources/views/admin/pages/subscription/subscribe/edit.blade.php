@@ -24,7 +24,7 @@
 <div class="card">
     <div class="card-header">Edit subscribe</div>
     <div class="card-body">
-        <form action="{{ route('subscribe.update', $subscribes->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('subscribecontact.update', $subscribecontact->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

@@ -39,7 +39,7 @@
 <div class="card">
     <div class="card-header">Create New subscribe</div>
     <div class="card-body">
-        <form action="{{ route('subscribe.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('subscribecontact.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">

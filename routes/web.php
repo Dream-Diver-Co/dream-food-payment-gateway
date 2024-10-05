@@ -23,6 +23,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ChefContactController;
 use App\Http\Controllers\MyChefController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\SubscribeContactController;
 
 
 
@@ -49,7 +50,9 @@ Route::get('/booking', [FrontendController::class, 'booking'])->name('booking');
 // Route::resource('usercontact', UserContactController::class);
 Route::post('usercontact', [UserContactController::class, 'store']);
 Route::post('chefcontact', [ChefContactController::class, 'store']);
-Route::post('subscribe', [SubscribeController::class, 'store']);
+Route::post('subscribecontact', [SubscribeContactController::class, 'store']);
+
+
 
 
 
@@ -152,7 +155,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
         Route::resource('chefcontact', ChefContactController::class);
         Route::resource('mychef', MyChefController::class);
-        Route::resource('subscribe', SubscribeController::class);
+        Route::resource('subscribecontact', SubscribeContactController::class);
+
 
 
 

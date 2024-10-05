@@ -136,29 +136,30 @@
         </div>
 
         <div class="container">
-            <div class="row g-4 form">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <input type="name" class="form-control border-primary p-2" placeholder="Your Name">
+            <form action="" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <div class="row g-4 form">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <input type="text" name="name" class="form-control border-primary p-2" placeholder="Your Name">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="email" name="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="tel" name="phone" class="form-control border-primary p-2" placeholder="Your Contact No">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" name="subject" class="form-control border-primary p-2" placeholder="Want to take any subscription">
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <textarea name="note" class="form-control border-primary p-2" placeholder="Your Note" required></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <input type="file" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <input type="note" class="form-control border-primary p-2" placeholder="note">
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
-                </div>
-            </div>
+            </form>
         </div>
     </form>
 </div>
