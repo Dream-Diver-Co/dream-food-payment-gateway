@@ -63,13 +63,13 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'title' => 'required|string|max:255',
-            'sub_title' => 'required|string|max:255',
+            'title' => 'nullable|string|max:255',
+            'sub_title' => 'nullable|string|max:255',
             // 'sizes' => 'required|array|min:1|max:6',
             // 'colors' => 'required|array|min:1|max:6',
             'price' => 'required|numeric',
-            'subcategory_id' => 'required|exists:subcategories,id',
-            'category_id' => 'required|exists:categories,id',
+            'subcategory_id' => 'nullable|exists:subcategories,id',
+            'category_id' => 'nullable|exists:categories,id',
         ]);
 
         $product->fill($request->all());

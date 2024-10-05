@@ -23,9 +23,9 @@ class SubscribeContactController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:15',
-            'subject' => 'required|string|max:255',
-            'note' => 'required|string|max:500',
+            'phone' => 'nullable|string|max:15',
+            'subject' => 'nullable|string|max:255',
+            'note' => 'nullable|string|max:500',
             'image' => 'nullable|image|max:2048',
         ]);
 
