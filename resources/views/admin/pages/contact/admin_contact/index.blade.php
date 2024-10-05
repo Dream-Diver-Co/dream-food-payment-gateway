@@ -38,11 +38,12 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Map location</th>
+                                        <th>Actions</th>
                                         <th>Address</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>Actions</th>
+                                        <th>Map location</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,10 +60,10 @@
                                             </form>
                                         </td>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->map }}</td>
                                         <td>{{ $item->address }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->phone }}</td>
+                                        <td>{{ $item->map }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
