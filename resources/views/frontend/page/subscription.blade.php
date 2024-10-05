@@ -2,6 +2,20 @@
 
 @section("content")
 
+<!-- success message -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- Check for success message -->
+            @if(session('success'))
+                <div id="success-message" class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+    </div>
+</div>
+<!-- success message -->
 
 <!-- Hero Start -->
 <div class="container-fluid bg-light mt-0">
