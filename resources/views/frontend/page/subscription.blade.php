@@ -125,7 +125,8 @@
 
 <!-- modal start -->
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="" method="post">
+    <form action="{{ url('subscribecontact') }}" method="POST" enctype="multipart/form-data" class="modal-content animate">
+        @csrf
 
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -136,9 +137,8 @@
         </div>
 
         <div class="container">
-            <form action="" method="POST" enctype="multipart/form-data">
-                @csrf
-
+            {{-- <form action="{{ url('subscribecontact') }}" method="POST" enctype="multipart/form-data" class="modal-content animate">
+                @csrf --}}
                 <div class="row g-4 form">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <input type="text" name="name" class="form-control border-primary p-2" placeholder="Your Name">
@@ -159,7 +159,7 @@
                         <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
                     </div>
                 </div>
-            </form>
+            {{-- </form> --}}
         </div>
     </form>
 </div>
