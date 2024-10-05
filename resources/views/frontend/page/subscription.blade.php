@@ -338,5 +338,18 @@
     //     proModal.style.display = "block";
     // }
 </script>
+
+<script>
+    // Auto-hide the success message after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+    });
+</script>
+
 @endsection
 
