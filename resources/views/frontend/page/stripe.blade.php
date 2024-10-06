@@ -113,6 +113,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="bg-wheat p-4 mb-3">
+                        <div class="border-bottom bg-light p-30 pt-3 pb-2">
+                            <div class="d-flex justify-content-between">
+                                <form class="mb-30" action="">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control " placeholder="Coupon Code">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary">Apply Coupon</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mb-5">
                         <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Payment</span></h5>
                         <div class="bg-wheat p-4">
